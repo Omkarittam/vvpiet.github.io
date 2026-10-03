@@ -1,0 +1,469 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>VVPIET Solapur</title>
+
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+    <!-- ================= NAVBAR ================= -->
+
+    <header>
+
+        <nav class="navbar">
+
+            <div class="logo">
+                <img src="/vvplogo.jpeg" alt="VVPIET Logo">
+
+                <div class="logo-text">
+                    <h2>VVPIET</h2>
+                    <span>Solapur</span>
+                </div>
+            </div>
+            <ul class="nav-links">
+
+                <li><a href="#home">Home</a></li>
+
+                <li><a href="#departments">Departments</a></li>
+
+                <li><a href="#about">About College</a></li>
+
+                <li><a href="#contact">Contact Us</a></li>
+
+            </ul>
+
+            <button class="menu-btn" onclick="toggleMenu()">
+                ☰
+            </button>
+
+        </nav>
+
+    </header>
+
+
+    <!-- ================= HOME ================= -->
+
+    <section id="home" class="hero">
+
+        <div class="hero-content">
+
+            <p class="welcome">
+                WELCOME TO
+            </p>
+
+            <h1>
+                Vidya Vikas Pratishthan
+                <br>
+                Institute of Engineering & Technology
+            </h1>
+
+            <h2>VVPIET, Solapur</h2>
+
+            <p class="hero-text">
+                Empowering students through quality education,
+                innovation and technology.
+            </p>
+
+            <a href="#departments" class="btn">
+                Explore Departments
+            </a>
+
+        </div>
+
+    </section>
+
+
+    <!-- ================= DEPARTMENTS ================= -->
+
+    <section id="departments" class="section">
+
+        <div class="section-heading">
+
+            <p>ACADEMICS</p>
+
+            <h2>Our Departments</h2>
+
+            <span>
+                Explore the engineering departments at VVPIET.
+            </span>
+
+        </div>
+
+
+        <div class="department-container">
+
+
+            <!-- AI & DS -->
+
+            <div class="department-card">
+
+                <div class="department-icon">🤖</div>
+
+                <h3>
+                    Artificial Intelligence
+                    & Data Science
+                </h3>
+
+                <p>
+                    Explore AI, machine learning, data science
+                    and intelligent technologies.
+                </p>
+
+                <button onclick="openDepartment('aids')">
+                    View Department
+                </button>
+
+            </div>
+
+
+            <!-- CSE -->
+
+            <div class="department-card">
+
+                <div class="department-icon">💻</div>
+
+                <h3>
+                    Computer Science
+                    & Engineering
+                </h3>
+
+                <p>
+                    Learn programming, software development,
+                    databases and computing.
+                </p>
+
+                <button onclick="openDepartment('cse')">
+                    View Department
+                </button>
+
+            </div>
+
+
+            <!-- CIVIL -->
+
+            <div class="department-card">
+
+                <div class="department-icon">🏗️</div>
+
+                <h3>
+                    Civil Engineering
+                </h3>
+
+                <p>
+                    Study construction, structures,
+                    infrastructure and environmental engineering.
+                </p>
+
+                <button onclick="openDepartment('civil')">
+                    View Department
+                </button>
+
+            </div>
+
+
+            <!-- ELECTRICAL -->
+
+            <div class="department-card">
+
+                <div class="department-icon">⚡</div>
+
+                <h3>
+                    Electrical Engineering
+                </h3>
+
+                <p>
+                    Learn electrical systems, power systems,
+                    machines and control systems.
+                </p>
+
+                <button onclick="openDepartment('electrical')">
+                    View Department
+                </button>
+
+            </div>
+
+
+            <!-- E&TC -->
+
+            <div class="department-card">
+
+                <div class="department-icon">📡</div>
+
+                <h3>
+                    Electronics & Telecommunication
+                </h3>
+
+                <p>
+                    Explore electronics, communication,
+                    embedded systems and digital technology.
+                </p>
+
+                <button onclick="openDepartment('entc')">
+                    View Department
+                </button>
+
+            </div>
+
+
+            <!-- MECHANICAL -->
+
+            <div class="department-card">
+
+                <div class="department-icon">⚙️</div>
+
+                <h3>
+                    Mechanical Engineering
+                </h3>
+
+                <p>
+                    Learn mechanical design, manufacturing,
+                    thermodynamics and engineering systems.
+                </p>
+
+                <button onclick="openDepartment('mechanical')">
+                    View Department
+                </button>
+
+            </div>
+
+        </div>
+
+    </section>
+
+
+    <!-- ================= DEPARTMENT POPUP ================= -->
+
+    <div id="departmentModal" class="modal">
+
+        <div class="modal-box">
+
+            <button class="close-btn" onclick="closeDepartment()">
+                ×
+            </button>
+
+            <div class="modal-icon" id="modalIcon">
+                💻
+            </div>
+
+            <h2 id="modalTitle">
+                Department
+            </h2>
+
+            <p id="modalDescription">
+                Department information.
+            </p>
+
+
+            <div class="modal-info">
+
+                <div>
+
+                    <h3>📚 Main Areas</h3>
+
+                    <p id="modalSubjects">
+                        Subjects
+                    </p>
+
+                </div>
+
+
+                <div>
+
+                    <h3>💼 Career Opportunities</h3>
+
+                    <p id="modalCareer">
+                        Career opportunities
+                    </p>
+
+                </div>
+
+            </div>
+
+
+            <button class="modal-close" onclick="closeDepartment()">
+
+                Close
+
+            </button>
+
+        </div>
+
+    </div>
+
+
+    <!-- ================= ABOUT ================= -->
+
+    <section id="about" class="about-section">
+
+        <div class="about-container">
+
+            <div class="about-image">
+
+                <img src="/vvp.jpg" alt="VVPIET College">
+
+            </div>
+
+
+            <div class="about-content">
+
+                <p class="small-heading">
+                    ABOUT US
+                </p>
+
+                <h2>
+                    About VVPIET
+                </h2>
+
+                <p>
+                    Vidya Vikas Pratishthan Institute of Engineering
+                    & Technology (VVPIET) is an engineering institute
+                    located in Solapur, Maharashtra.
+                </p>
+
+                <p>
+                    The institute provides students with opportunities
+                    to develop technical knowledge, practical skills
+                    and professional abilities.
+                </p>
+
+                <p>
+                    VVPIET focuses on engineering education,
+                    innovation, practical learning and overall
+                    development of students.
+                </p>
+
+            </div>
+
+        </div>
+
+    </section>
+
+
+    <!-- ================= CONTACT ================= -->
+
+    <section id="contact" class="contact-section">
+
+        <div class="section-heading contact-heading">
+
+            <p>GET IN TOUCH</p>
+
+            <h2>Contact Us</h2>
+
+            <span>
+                Have a question? Get in touch with VVPIET.
+            </span>
+
+        </div>
+
+
+        <div class="contact-container">
+
+            <div class="contact-card">
+
+                <div class="contact-icon">📍</div>
+
+                <h3>Address</h3>
+
+                <p>
+                    Gat No. 72/2, Pratapnagar,
+                    Soregaon-Dongaon Road,
+                    Soregaon, Solapur,
+                    Maharashtra
+                </p>
+
+            </div>
+
+
+            <div class="contact-card">
+
+                <div class="contact-icon">📞</div>
+
+                <h3>Phone</h3>
+
+                <p>+91 83800 30555</p>
+
+                <a href="tel:+918380030555">
+                    Call Now
+                </a>
+
+            </div>
+
+
+            <div class="contact-card">
+
+                <div class="contact-icon">✉️</div>
+
+                <h3>Email</h3>
+
+                <p>
+                    vvpiet@rediffmail.com
+                </p>
+
+                <a href="mailto:vvpiet@rediffmail.com">
+                    Send Email
+                </a>
+
+            </div>
+
+        </div>
+
+    </section>
+
+
+    <!-- ================= FOOTER ================= -->
+
+    <footer>
+
+        <div class="footer-content">
+
+            <h2>VVPIET</h2>
+
+            <p>
+                Vidya Vikas Pratishthan Institute of
+                Engineering & Technology, Solapur
+            </p>
+
+            <div class="footer-links">
+
+                <a href="#home">Home</a>
+
+                <a href="#departments">
+                    Departments
+                </a>
+
+                <a href="#about">
+                    About
+                </a>
+
+                <a href="#contact">
+                    Contact
+                </a>
+
+            </div>
+
+            <hr>
+
+            <p class="copyright">
+
+                © <span id="year"></span>
+                VVPIET Solapur.
+                All Rights Reserved.
+
+            </p>
+
+        </div>
+
+    </footer>
+
+
+    <script src="script.js"></script>
+
+</body>
+
+</html>
